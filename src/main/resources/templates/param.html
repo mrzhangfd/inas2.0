@@ -28,6 +28,7 @@
 
     <h2 id="realName" th:text="${realName}+'   '"></h2>
     <input id="objectId" th:value="${objectId}" type="hidden"/>
+    <h1 id ="testname" th:vale="${testName}"></h1>
     <p></p>
 
     <div id="select_area" style="width: 800px;height: 300px"></div>
@@ -87,7 +88,7 @@
             <tr th:each="tuple : ${allParams}">
                 <td class="col-2" th:text="${tuple.key}" >key</td>
                 <td width="col-2" th:text="${tuple.value}">value</td>
-                <td width="col-1"><a th:href="${'/deleteparam/'+objectId +'%%'+tuple.key}" >删除</a></td>
+                <td width="col-1"><a th:href="${'/deleteparam/'+objectId+'%%'+tuple.key}" >删除</a></td>
             </tr>
         </table>
     </div>
