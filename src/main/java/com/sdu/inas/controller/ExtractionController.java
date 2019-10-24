@@ -42,12 +42,12 @@ public class ExtractionController {
     List<Action> getExtractResult(String rawinfo) throws InterruptedException {
 
         ArrayList<Action> actionList = new ArrayList<>();
-        System.out.println(rawinfo);
+        //System.out.println(rawinfo);
         String[] split = rawinfo.split("。");
 
         for (String b : split) {
             b = b + "。";
-            System.out.println(b);
+            //System.out.println(b);
             SyntaxResult ltpResult = ltpService.getLtpResult(b);
             try {
                 List<Action> dotrans = ltpResult.dotrans();

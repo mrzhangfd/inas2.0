@@ -24,6 +24,19 @@ public class HbaseModelUtil {
     public static final String EVENTS_PARAMS ="EventParam";
 
 
+    /**
+     * 新建表Object，列簇诶Rawinfo和Eventlist
+     */
+    public static final String NEW_BASIC_TABLE="Object";
+
+    public static final String NEW_BASIC_RAW = "Rawinfo";
+
+    public static final String NEW_RAW_TEXT="Rawtext";
+
+    public static final String NEW_BASIC_EVENT = "Eventlist";
+
+
+
     public static final String CF1 = "rawinfo";
 
     public static final String COLUMN1 = "realname";
@@ -46,6 +59,9 @@ public class HbaseModelUtil {
 
 
     public static final String DEFAULT = "default";
+
+
+
 
     public static HbaseModel kvToHbaseModel(KeyValue kv) {
         HbaseModel hbaseModel = new HbaseModel();
