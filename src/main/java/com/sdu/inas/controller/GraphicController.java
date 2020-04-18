@@ -137,8 +137,8 @@ public class GraphicController {
 
 
     @RequestMapping("/net/{objectId}")
-    public String getParams(@PathVariable String objectId, Model model){
-        model.addAttribute("objectId",objectId);
+    public String getParams(@PathVariable String objectId, Model model) {
+        model.addAttribute("objectId", objectId);
         return "netshow";
     }
 
@@ -148,7 +148,7 @@ public class GraphicController {
 
         if (!(change % 2 == 0)) {
             node.setLabel("\n" + event.pack());
-        }else {
+        } else {
             node.setLabel(event.pack());
         }
         node.setSize(20);
@@ -178,7 +178,7 @@ public class GraphicController {
         Node exNode = null;
         Node firstNode = null;
         Node nameNode = new Node();
-        int no =2;
+        int no = 2;
         for (Event event : events) {
             if (!"2050-01-01".equals(event.getTs())) {
                 Node node = transEvent2Node(no, objectId, event);

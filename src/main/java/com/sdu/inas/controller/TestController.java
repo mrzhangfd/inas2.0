@@ -1,13 +1,9 @@
 package com.sdu.inas.controller;
 
-
 import com.sdu.inas.beans.*;
 import com.sdu.inas.repository.HbaseDao;
 import com.sdu.inas.service.*;
-import com.sdu.inas.beans.*;
-import com.sdu.inas.service.*;
 import com.sdu.inas.util.CommonUtil;
-
 import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
@@ -75,9 +71,9 @@ public class TestController {
         String objectId = name + CommonUtil.genRandomNum();
         String realName = name + " " + description;
         rawinfoService.insertRealName(realName, objectId);
-        UUID uuid=UUID.randomUUID();
-        String  eventId = uuid.toString();
-        timelineService.insertEvent(objectId,new Event(eventId,objectId,"2050-01-01","",realName,""));
+        UUID uuid = UUID.randomUUID();
+        String eventId = uuid.toString();
+        timelineService.insertEvent(objectId, new Event(eventId, objectId, "2050-01-01", "", realName, ""));
 
         HashMap<String, String> desList = new HashMap<>();
         List<RealEntity> objectsByPrefix = objectService.findEntitiesByPrefix(prefix);
@@ -112,13 +108,13 @@ public class TestController {
             node.setSerial(CommonUtil.toDays(event.getTs()));
             if (!(change % 2 == 0)) {
                 node.setLabel("\n" + event.pack());
-            }else {
+            } else {
                 node.setLabel(event.pack());
             }
             change++;
 //            node.setLabel(event.pack());
             if (event.getTs().equals("2050-01-01")) {
-                node.setLabel("\n"+realEntity.getRealName());
+                node.setLabel("\n" + realEntity.getRealName());
                 node.setSerial(0);
             }
 
@@ -180,7 +176,7 @@ public class TestController {
 
     @RequestMapping(value = "/commit.do", method = RequestMethod.POST)
     public @ResponseBody
-    String commitEdit(String newNodes, String newEdges, String rawinfo,String id) {
+    String commitEdit(String newNodes, String newEdges, String rawinfo, String id) {
         try {
             JSONArray nodeArray = new JSONArray(newNodes);
             for (int i = 0; i < nodeArray.length(); i++) {
@@ -223,11 +219,10 @@ public class TestController {
 
     public static void main(String[] args) {
 
-        HbaseDao hbaseDao=new HbaseDao();
+        HbaseDao hbaseDao = new HbaseDao();
 
         //RelevanceRepository relevanceRepository ;
         //hbaseDao.delColumnByQualifier(HbaseModelUtil.EVENTS_TABLE,"94be7609-5a60-4a14-923e-631d440aefb1",HbaseModelUtil.EVENTS_PARAMS,);
-
 
 
     }
