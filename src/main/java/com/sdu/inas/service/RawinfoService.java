@@ -7,6 +7,7 @@ package com.sdu.inas.service;
 public interface RawinfoService {
 
     String findRealName(String objectId);
+
     String findRawText(String objectId);
 
     void addRealName(String realName,String objectId);

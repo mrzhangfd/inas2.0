@@ -44,7 +44,7 @@ public class ObjectController {
     public String getDetailedInfo(@PathVariable String objectId, Model model){
         RealEntity objectById = null;
         try {
-//            objectById = objectService.findObjectById(objectId);
+//          objectById = objectService.findObjectById(objectId);
             objectById = objectService.findEntityByIdFromEs(objectId);
             model.addAttribute("objectId",objectId);
             ArrayList<Event> events = objectById.getEvents();
@@ -75,8 +75,4 @@ public class ObjectController {
         model.addAttribute("entities",entityList);
         return "objectdeslist";
     }
-
-
-
-
 }

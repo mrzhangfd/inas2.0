@@ -28,7 +28,6 @@ public class CrawlerUtil {
                 .select("div").select("div.main-content").select("div.para");
         ArrayList<String> paraList = new ArrayList<>();
         for (Element e : elements) {
-//            System.out.println(e.text());
             if (e.text().length()>0){
                 paraList.add(e.text());}
         }
@@ -37,9 +36,10 @@ public class CrawlerUtil {
     }
 
     public List<String> crawlerLink(String keyWord) throws IOException {
-        String url = BASE_B + keyWord;
+        String url = BASE_A + keyWord;
         String html = findHTML(url);
-        Document doc = Jsoup.parse(html);
+        String newHtml=new String(html.getBytes("utf-8"),"gb2312");
+        Document doc = Jsoup.parse(newHtml);
         ArrayList<String> list = new ArrayList<String>();
         List<String> urls = findBaikeLink(doc, list);
         return urls;

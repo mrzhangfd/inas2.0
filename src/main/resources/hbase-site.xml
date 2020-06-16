@@ -2,7 +2,7 @@
 <configuration>
     <property>
         <name>hbase.rootdir</name>
-        <value>hdfs://192.168.11.206:9000/hbase</value>
+        <value>hdfs://192.168.11.203:9000/hbase</value>
     </property>
     <property>
         <name>hbase.zookeeper.property.dataDir</name>
@@ -14,7 +14,7 @@
     </property>
     <property>
         <name>hbase.zookeeper.quorum</name>
-        <value>192.168.11.206</value>
+        <value>192.168.11.203</value>
     </property>
     <property>
         <name>hbase.master.info.port</name>

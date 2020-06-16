@@ -9,9 +9,9 @@ import org.apache.hadoop.hbase.util.Bytes;
  */
 public class HbaseModelUtil {
 
-    public static final String BASICTABLE ="Objects";
+    public static final String BASICTABLE ="Object";
 
-    public static final String BASIC_TABLE ="Objects";
+    public static final String BASIC_TABLE ="Object";
 
     public static final String BASIC_RAW = "Rawinfo";
 
@@ -19,7 +19,7 @@ public class HbaseModelUtil {
 
     public static final String BASIC_EVENT = "Eventlist";
 
-    public static final String EVENTS_TABLE = "Event_Infos";
+    public static final String EVENTS_TABLE = "Event_Info";
 
     public static final String EVENTS_PARAMS ="EventParam";
 
@@ -53,14 +53,12 @@ public class HbaseModelUtil {
 
     public static final String CONN_OUT = "Outconn";
 
-    public static final String RELEVANCES_TABLE = "Rele_Infos";
+    public static final String RELEVANCES_TABLE = "Rele_Info";
 
     public static final String RELEVANCES_PARAMS = "ReleParam";
 
 
     public static final String DEFAULT = "default";
-
-
 
 
     public static HbaseModel kvToHbaseModel(KeyValue kv) {

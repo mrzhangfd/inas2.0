@@ -2,6 +2,7 @@ package com.sdu.inas.service;
 
 import com.sdu.inas.beans.Entity;
 import com.sdu.inas.beans.RealEntity;
+import org.apache.hadoop.hbase.client.Result;
 
 import java.util.List;
 

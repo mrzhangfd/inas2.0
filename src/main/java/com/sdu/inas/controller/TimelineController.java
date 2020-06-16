@@ -2,7 +2,6 @@ package com.sdu.inas.controller;
 
 import com.sdu.inas.beans.Event;
 import com.sdu.inas.beans.Relevance;
-import com.sdu.inas.beans.*;
 import com.sdu.inas.service.ConnectionService;
 import com.sdu.inas.service.RelevanceService;
 import com.sdu.inas.service.TimelineService;

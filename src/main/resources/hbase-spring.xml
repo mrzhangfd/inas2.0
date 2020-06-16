@@ -14,7 +14,7 @@
     </hdp:configuration>
 
     <!-- HBase连接配置 -->
-    <hdp:hbase-configuration  id="hbaseConfiguration"/>
+    <hdp:hbase-configuration  id="hbaseConfiguration" delete-connection="false"/>
 
     <!-- HbaseTemplate Bean配置-->
     <bean id="hbaseTemplate" class="org.springframework.data.hadoop.hbase.HbaseTemplate"
